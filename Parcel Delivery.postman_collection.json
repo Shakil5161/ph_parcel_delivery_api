@@ -1,0 +1,407 @@
+{
+	"info": {
+		"_postman_id": "5aa6549a-16bd-4e65-a7f6-b3f7c02fd900",
+		"name": "Parcel Delivery Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45530362",
+		"_collection_link": "https://ph-next-level-1356.postman.co/workspace/PH-Level-2~c9a9f9f5-bd35-4020-9b55-2402ca111785/collection/45530362-5aa6549a-16bd-4e65-a7f6-b3f7c02fd900?action=share&source=collection_link&creator=45530362"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User Registration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODhiY2EwOWFjY2ZlMTlmNmYyODM3MmMiLCJlbWFpbCI6InNoYWtpbEBnbWFpbC5jb20iLCJyb2xlIjoiU1VQRVJfQURNSU4iLCJpYXQiOjE3NTQxMzQ3NDYsImV4cCI6MTc1NDk5ODc0Nn0.oq-WPKjA55WgS8xFJ3mmQJH1R6iYv_pjdusu1BR34qw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jon\",\r\n    \"email\": \"Jon@gmail.com\",\r\n    \"password\": \"5161@Jon\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODhiODc1YmIxMzJkNTVkMWMzOWIyMWQiLCJlbWFpbCI6InNhZmEyQGdtYWlsLmNvbSIsInJvbGUiOiJTRU5ERVJTIiwiaWF0IjoxNzU0MTM0ODE5LCJleHAiOjE3NTQ5OTg4MTl9.W3xmLIcAqXXfTGKeEaxWF-vOOPN-gerKEKc5SKFhgd8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"role\": \"RIDER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/user/688e33cff2412ba757ce2512",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"688e33cff2412ba757ce2512"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODhiODc1YmIxMzJkNTVkMWMzOWIyMWQiLCJlbWFpbCI6InNhZmEyQGdtYWlsLmNvbSIsInJvbGUiOiJTRU5ERVJTIiwiaWF0IjoxNzUzOTkyMDk2LCJleHAiOjE3NTQ4NTYwOTZ9.oQ8fb_TFAsCzpLF5qF24_Pjs7_PokPRLtGFgYm5QBu0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/v1/user/all-user",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"all-user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"email\": \"safa2@gmail.com\",\r\n    // \"password\": \"5161@Safa\"\r\n    \"email\": \"super@gmail.com\",\r\n    \"password\": \"51613236\"\r\n    // \"email\": \"siam@gmail.com\",\r\n    // \"password\": \"123siam@gmail.com\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Parcel",
+			"item": [
+				{
+					"name": "Create Parcel",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODhiODc1YmIxMzJkNTVkMWMzOWIyMWQiLCJlbWFpbCI6InNhZmEyQGdtYWlsLmNvbSIsInJvbGUiOiJTRU5ERVJTIiwiaWF0IjoxNzU0MTIwMDUxLCJleHAiOjE3NTQ5ODQwNTF9.AnrWgQeTdRjOaCPX5b8BkVF_jnIilPYOWJfo8qinGGE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Dress\",\r\n    \"receiver\": {\r\n        \"email\": \"siam@gmail.com\",\r\n        \"name\": \"Siam\",\r\n        \"phone\": \"01641969790\",\r\n        \"address\": \"Dhaka\"\r\n    },\r\n    \"weight\": 5,\r\n     \"dimensions\": {\r\n        \"length\": 10,\r\n        \"width\": 7,\r\n        \"height\": 7\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/parcels/create",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"parcels",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Parcel",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODhkZmEzN2QxMTVlY2VmZGRlNDgyZGIiLCJlbWFpbCI6InN1cGVyQGdtYWlsLmNvbSIsInJvbGUiOiJTVVBFUl9BRE1JTiIsImlhdCI6MTc1NDE1MDcwNSwiZXhwIjoxNzU1MDE0NzA1fQ.bX57rrzbsFTeYIlQworG5SLElrojq7uJ7W0ERE3M5iY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"assignedTo\": \"688e33cff2412ba757ce2512\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/parcels/688dbfde72ad8bd5c5ae1bf5",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"parcels",
+								"688dbfde72ad8bd5c5ae1bf5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get My Parcel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODhiODc1YmIxMzJkNTVkMWMzOWIyMWQiLCJlbWFpbCI6InNhZmEyQGdtYWlsLmNvbSIsInJvbGUiOiJTRU5ERVJTIiwiaWF0IjoxNzU0MTIwMDUxLCJleHAiOjE3NTQ5ODQwNTF9.AnrWgQeTdRjOaCPX5b8BkVF_jnIilPYOWJfo8qinGGE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/parcels/me?status=Requested",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"parcels",
+								"me"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "Requested"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Parcel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODhiODc1YmIxMzJkNTVkMWMzOWIyMWQiLCJlbWFpbCI6InNhZmEyQGdtYWlsLmNvbSIsInJvbGUiOiJTRU5ERVJTIiwiaWF0IjoxNzU0MTIwMDUxLCJleHAiOjE3NTQ5ODQwNTF9.AnrWgQeTdRjOaCPX5b8BkVF_jnIilPYOWJfo8qinGGE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/parcels/me?status=Requested",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"parcels",
+								"me"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "Requested"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Parcel Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODhiODc1YmIxMzJkNTVkMWMzOWIyMWQiLCJlbWFpbCI6InNhZmEyQGdtYWlsLmNvbSIsInJvbGUiOiJTRU5ERVJTIiwiaWF0IjoxNzU0MTIwMDUxLCJleHAiOjE3NTQ5ODQwNTF9.AnrWgQeTdRjOaCPX5b8BkVF_jnIilPYOWJfo8qinGGE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/parcels/me?status=Requested",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"parcels",
+								"me"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "Requested"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
