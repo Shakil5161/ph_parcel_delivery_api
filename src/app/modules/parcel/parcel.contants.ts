@@ -1,0 +1,1 @@
+export const parcelSearchAbleField = ['title', 'description', 'status']
