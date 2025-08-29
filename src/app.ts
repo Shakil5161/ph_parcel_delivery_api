@@ -1,3 +1,5 @@
+
+import cookieParser from "cookie-parser";
 import cors from "cors";
 import express, { Request, Response } from "express";
 import { globalErrorHandler } from "./app/middleware/globalErrorHandler";
@@ -5,6 +7,7 @@ import notFound from "./app/middleware/notFound";
 import { router } from "./app/routes";
 const app = express()
 
+app.use(cookieParser());
 app.use(express.json())
 app.use(cors({
     origin: "http://localhost:5173", // your frontend URL
