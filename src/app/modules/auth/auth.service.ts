@@ -6,6 +6,7 @@ import { IUser } from "../user/user.interface";
 import { User } from "../user/user.model";
 
 const loginUser = async (payload: Partial<IUser>) => {
+    console.log(payload, 'payload')
     const { email, password } = payload;
 
     const isUserExist = await User.findOne({ email })

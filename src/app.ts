@@ -6,7 +6,10 @@ import { router } from "./app/routes";
 const app = express()
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: "http://localhost:5173", // your frontend URL
+    credentials: true
+}))
 
 app.use("/api/v1", router)
 
