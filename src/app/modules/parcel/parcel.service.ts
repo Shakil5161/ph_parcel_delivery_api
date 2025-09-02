@@ -118,7 +118,8 @@ const getParcelsForUser = async (query: Record<string, string>, decodedToken: Jw
     }
 }
 const getAllParcels = async (query: Record<string, string>) => {
-    const filter = query;
+    const filter = { ...query };
+    const trackId = query.trackId;
     const status = query.status;
     const sort = query.sort || '-createdAt';
 
@@ -137,9 +138,12 @@ const getAllParcels = async (query: Record<string, string>) => {
         delete filter[field]
     }
     
-        if (status) {
-            filter.status = status;
-        }
+     if (trackId) {
+        filter.trackingId = trackId;
+    }
+    if (status) {
+        filter.status = status;
+    }
 
     const parcel = await Parcel.find(userBy).find(filter).sort(sort).select(fields).skip(skip).limit(limit);
 

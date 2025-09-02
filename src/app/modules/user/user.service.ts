@@ -68,9 +68,11 @@ const updateUser = async (userId: string, payload: Partial<IUser>, decodedToken:
 }
 
 
-const getAllUsers = async () => {
-    const users = await User.find({})
-    const totalUser = await User.countDocuments;
+const getAllUsers = async (role?: string) => {
+    const filter = role ? { role } : {};
+    const users = await User.find(filter);
+    const totalUser = await User.countDocuments(filter);
+
 
     return{
         data: users,

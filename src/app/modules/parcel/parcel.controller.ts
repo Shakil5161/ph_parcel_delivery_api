@@ -67,7 +67,7 @@ const getAllParcel = catchAsync( async(req: Request, res: Response, next: NextFu
     sendResponse(res, {
         statusCode: httpStatus.OK,
         success: true,
-        message: 'Parcel is created successfully',
+        message: 'Parcel is retrieved successfully',
         data: result,
     });
 })

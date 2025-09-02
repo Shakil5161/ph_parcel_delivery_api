@@ -34,7 +34,9 @@ const updateUser = catchAsync( async (req: Request, res: Response, next: NextFun
 })
 
 const getAllUsers = catchAsync( async(req: Request, res: Response, next: NextFunction) => {
-    const users = await UserServices.getAllUsers()
+
+    const role = req.query.role as string | undefined;
+    const users = await UserServices.getAllUsers(role);
 
     sendResponse(res, {
         success: true,
