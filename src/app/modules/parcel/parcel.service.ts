@@ -69,7 +69,7 @@ const getParcelsForUser = async (query: Record<string, string>, decodedToken: Jw
     const filter = query;
     const status = query.status;
     const sort = query.sort || '-createdAt';
-
+    const trackId = query.trackId;
 
     const page = Number(query.page) || 1;
     const limit = Number(query.limit) || 10;
@@ -87,6 +87,10 @@ const getParcelsForUser = async (query: Record<string, string>, decodedToken: Jw
 
     for( const field of excludeField){
         delete filter[field]
+    }
+
+    if (trackId) {
+        filter.trackingId = trackId;
     }
     
     console.log(filter, 'filter')

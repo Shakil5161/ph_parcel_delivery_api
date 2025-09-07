@@ -79,6 +79,17 @@ const getAllUsers = async (role?: string) => {
         meta: totalUser
     }
 }
+const getSingleUser = async (userId: string) => {
+  const user = await User.findById(userId)
+
+  if (!user) {
+    throw new Error("User not found");
+  }
+
+  return {
+        data: user
+    }
+};
 
 const getMe = async (userId: string) => {
     const user = await User.findById(userId).select("-password");
@@ -87,4 +98,11 @@ const getMe = async (userId: string) => {
     }
 };
 
-export const UserServices = { createUser, updateUser, getAllUsers, getMe }
+
+const deleteUser = async (id: string) => {
+  const deletedUser = await User.findByIdAndDelete(id);
+  return deletedUser;
+};
+
+
+export const UserServices = { createUser, updateUser, getAllUsers, getMe, getSingleUser, deleteUser }
