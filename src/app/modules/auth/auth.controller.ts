@@ -29,13 +29,15 @@ const logout = catchAsync(async (req: Request, res: Response, next: NextFunction
 
     res.clearCookie("accessToken", {
         httpOnly: true,
-        secure: false,
-        sameSite: "lax"
+        secure: true, // <-- must match how you set the cookie
+        sameSite: "lax",
+        path: "/", // 
     })
     res.clearCookie("refreshToken", {
         httpOnly: true,
-        secure: false,
-        sameSite: "lax"
+        secure: true, // <-- must match how you set the cookie
+        sameSite: "lax",
+        path: "/", 
     })
 
     sendResponse(res, {
